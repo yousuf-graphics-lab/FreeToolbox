@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Free Toolbox – 5 Essential Tools in One Place</title>
+    <meta name="description" content="Free online toolbox including an online calculator, free unit converter, text counter, age calculator tool, and more. Essential SEO tools for webmasters.">
+    <meta name="keywords" content="online calculator, free unit converter, text counter, age calculator tool, SEO tools for webmasters, free online tools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://example.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ultimate Free Toolbox – 5 Essential Tools in One Place">
+    <meta property="og:description" content="Access essential free online tools: calculator, unit converter, text counter, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ultimate Free Toolbox">
+    <meta name="twitter:description" content="Access essential free online tools: calculator, unit converter, text counter, and more.">
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #3b82f6;
+            --color-primary-dark: #2563eb;
+        }
+        
+        @custom-variant dark (&:where(.dark, .dark *));
+        
+        @layer utilities {
+            .glass-card {
+                @apply bg-white/70 backdrop-blur-md border border-gray-200 shadow-xl rounded-2xl p-6 dark:bg-gray-800/70 dark:border-gray-700 transition-colors duration-300;
+            }
+            .input-field {
+                @apply w-full px-4 py-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white transition-colors;
+            }
+            .btn {
+                @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-colors font-medium active:scale-95 flex items-center justify-center gap-2;
+            }
+            .btn-secondary {
+                @apply px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 focus:ring-4 focus:ring-gray-100 transition-colors font-medium active:scale-95 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:focus:ring-gray-800 flex items-center justify-center gap-2;
+            }
+            .tool-section {
+                @apply hidden opacity-0 transition-opacity duration-300;
+            }
+            .tool-section.active {
+                @apply block opacity-100;
+            }
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD for WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Ultimate Free Toolbox",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "A collection of essential free online tools including calculator, text counter, unit converter, and more."
+    }
+    </script>
+    <!-- Schema.org JSON-LD for FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is this toolbox free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all the tools in this toolbox are 100% free to use with no installation required."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do I need to install anything?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No installation is required. These are browser-based online tools."
+        }
+      }]
+    }
+    </script>
+    <!-- Schema.org JSON-LD for Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://example.com/"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://example.com/#math-finance"
+      }]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 min-h-screen flex flex-col transition-colors duration-300">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 shadow-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">FreeToolbox</span>
+            </div>
+            
+            <nav class="hidden md:flex gap-6" aria-label="Main Navigation">
+                <a href="#math-finance" class="hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors" onclick="switchTab('math-finance')">Math Tools</a>
+                <a href="#text-dev" class="hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors" onclick="switchTab('text-dev')">Text & Dev</a>
+                <a href="#dates-units" class="hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors" onclick="switchTab('dates-units')">Dates & Units</a>
+            </nav>
+
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors focus:ring-2 focus:ring-blue-500">
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 2.32a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.415l-.708-.708a1 1 0 010-1.414zM16 10a1 1 0 011 1h1a1 1 0 110-2h-1a1 1 0 01-1 1zm-4.22 4.27a1 1 0 011.415 0l.707.708a1 1 0 01-1.414 1.414l-.708-.707a1 1 0 010-1.415zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-2.32a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.415l.708.708a1 1 0 010 1.414zM4 10a1 1 0 01-1-1H2a1 1 0 110 2h1a1 1 0 011-1zm2.32-4.27a1 1 0 01-1.415 0l-.707-.708a1 1 0 011.414-1.414l.708.707a1 1 0 010 1.415zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path></svg>
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-gray-200" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-gray-900 dark:text-white">Ultimate Free Toolbox – 5 Essential Tools in One Place</h1>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Your go-to collection of SEO tools for webmasters, everyday utilities, and development aids. Fast, secure, and 100% free.</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="flex flex-wrap gap-2 justify-center mb-8 border-b border-gray-200 dark:border-gray-700 pb-4" role="tablist" aria-label="Tool Categories">
+            <button role="tab" aria-selected="true" aria-controls="math-finance" id="tab-math-finance" class="tab-btn active px-6 py-2.5 rounded-full font-medium transition-all bg-blue-600 text-white shadow-md shadow-blue-500/30" onclick="switchTab('math-finance')">Math & Finance</button>
+            <button role="tab" aria-selected="false" aria-controls="text-dev" id="tab-text-dev" class="tab-btn px-6 py-2.5 rounded-full font-medium transition-all bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700" onclick="switchTab('text-dev')">Text & Dev</button>
+            <button role="tab" aria-selected="false" aria-controls="dates-units" id="tab-dates-units" class="tab-btn px-6 py-2.5 rounded-full font-medium transition-all bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700" onclick="switchTab('dates-units')">Dates & Units</button>
+        </div>
+
+        <!-- Tab Contents -->
+        
+        <!-- Tab 1: Math & Finance -->
+        <section id="math-finance" class="tool-section active" role="tabpanel" aria-labelledby="tab-math-finance">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 1. Standard Calculator -->
+                <article class="glass-card flex flex-col h-full" id="calculator">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-gray-800 dark:text-white"><svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg> Online Calculator</h2>
+                    <div class="bg-gray-100 dark:bg-gray-900 rounded-xl p-4 flex-grow flex flex-col shadow-inner border border-gray-200 dark:border-gray-700">
+                        <input type="text" id="calc-display" aria-label="Calculator display" class="w-full text-right text-3xl font-mono bg-transparent outline-none mb-4 py-2 border-b-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white" readonly value="0">
+                        <div class="grid grid-cols-4 gap-2 flex-grow">
+                            <button class="calc-btn btn-secondary col-span-2" aria-label="Clear" onclick="calcClear()">C</button>
+                            <button class="calc-btn btn-secondary" aria-label="Delete" onclick="calcDel()">DEL</button>
+                            <button class="calc-btn btn-secondary text-blue-600 dark:text-blue-400 font-bold text-xl" aria-label="Divide" onclick="calcOp('/')">÷</button>
+                            
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('7')">7</button>
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('8')">8</button>
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('9')">9</button>
+                            <button class="calc-btn btn-secondary text-blue-600 dark:text-blue-400 font-bold text-xl" aria-label="Multiply" onclick="calcOp('*')">×</button>
+                            
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('4')">4</button>
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('5')">5</button>
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('6')">6</button>
+                            <button class="calc-btn btn-secondary text-blue-600 dark:text-blue-400 font-bold text-xl" aria-label="Subtract" onclick="calcOp('-')">-</button>
+                            
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('1')">1</button>
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('2')">2</button>
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('3')">3</button>
+                            <button class="calc-btn btn-secondary text-blue-600 dark:text-blue-400 font-bold text-xl" aria-label="Add" onclick="calcOp('+')">+</button>
+                            
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3 col-span-2" onclick="calcNum('0')">0</button>
+                            <button class="calc-btn bg-white dark:bg-gray-700 shadow-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 font-bold text-lg text-gray-800 dark:text-white py-3" onclick="calcNum('.')">.</button>
+                            <button class="calc-btn btn bg-blue-600 text-white font-bold text-xl rounded-lg" aria-label="Equals" onclick="calcEq()">=</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. BMI Calculator -->
+                <article class="glass-card flex flex-col h-full" id="bmi-calculator">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-gray-800 dark:text-white"><svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg> BMI Calculator</h2>
+                    <div class="space-y-4 flex-grow flex flex-col">
+                        <div>
+                            <label for="bmi-height" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Height (cm)</label>
+                            <input type="number" id="bmi-height" class="input-field" placeholder="175" min="1" oninput="calcBMI()">
+                        </div>
+                        <div>
+                            <label for="bmi-weight" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Weight (kg)</label>
+                            <input type="number" id="bmi-weight" class="input-field" placeholder="70" min="1" oninput="calcBMI()">
+                        </div>
+                        <div class="mt-auto p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-center border border-gray-200 dark:border-gray-700">
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Your BMI</p>
+                            <p id="bmi-result" class="text-3xl font-bold text-blue-600 dark:text-blue-400 my-1">--</p>
+                            <p id="bmi-category" class="font-medium text-gray-700 dark:text-gray-300">Enter details</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Tip Splitter -->
+                <article class="glass-card flex flex-col h-full" id="tip-splitter">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-gray-800 dark:text-white"><svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Tip Splitter</h2>
+                    <div class="space-y-4 flex-grow flex flex-col">
+                        <div>
+                            <label for="tip-bill" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Bill Amount ($)</label>
+                            <input type="number" id="tip-bill" class="input-field" placeholder="100" min="0" step="0.01" oninput="calcTip()">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="tip-percent" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tip %</label>
+                                <input type="number" id="tip-percent" class="input-field" value="15" min="0" oninput="calcTip()">
+                            </div>
+                            <div>
+                                <label for="tip-people" class="block text-sm font-medium text-gray-700 dark:text-gray-300">People</label>
+                                <input type="number" id="tip-people" class="input-field" value="1" min="1" oninput="calcTip()">
+                            </div>
+                        </div>
+                        <div class="mt-auto p-4 bg-gray-100 dark:bg-gray-800 rounded-lg flex justify-between items-center border border-gray-200 dark:border-gray-700">
+                            <div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Per Person</p>
+                                <p id="tip-per-person" class="text-2xl font-bold text-blue-600 dark:text-blue-400">$0.00</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Total Tip</p>
+                                <p id="tip-total" class="font-medium text-gray-800 dark:text-gray-200">$0.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Tab 2: Text & Dev -->
+        <section id="text-dev" class="tool-section" role="tabpanel" aria-labelledby="tab-text-dev">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- 4. Word & Character Counter -->
+                <article class="glass-card flex flex-col h-full md:col-span-2" id="text-counter">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-gray-800 dark:text-white"><svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg> Text Counter</h2>
+                    <div class="flex-grow flex flex-col">
+                        <label for="counter-text" class="sr-only">Input text to count</label>
+                        <textarea id="counter-text" class="input-field flex-grow min-h-[150px] resize-y font-mono text-sm" placeholder="Type or paste your text here..." oninput="updateCounter()"></textarea>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+                            <div class="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-lg text-center border border-blue-100 dark:border-blue-800">
+                                <p class="text-xs text-blue-600 dark:text-blue-400 uppercase font-semibold">Words</p>
+                                <p id="count-words" class="text-2xl font-bold text-gray-900 dark:text-white">0</p>
+                            </div>
+                            <div class="bg-indigo-50 dark:bg-indigo-900/30 p-3 rounded-lg text-center border border-indigo-100 dark:border-indigo-800">
+                                <p class="text-xs text-indigo-600 dark:text-indigo-400 uppercase font-semibold">Characters</p>
+                                <p id="count-chars" class="text-2xl font-bold text-gray-900 dark:text-white">0</p>
+                            </div>
+                            <div class="bg-purple-50 dark:bg-purple-900/30 p-3 rounded-lg text-center border border-purple-100 dark:border-purple-800">
+                                <p class="text-xs text-purple-600 dark:text-purple-400 uppercase font-semibold">Without Spaces</p>
+                                <p id="count-nospaces" class="text-2xl font-bold text-gray-900 dark:text-white">0</p>
+                            </div>
+                            <div class="bg-pink-50 dark:bg-pink-900/30 p-3 rounded-lg text-center border border-pink-100 dark:border-pink-800">
+                                <p class="text-xs text-pink-600 dark:text-pink-400 uppercase font-semibold">Paragraphs</p>
+                                <p id="count-paras" class="text-2xl font-bold text-gray-900 dark:text-white">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Text Case Converter -->
+                <article class="glass-card flex flex-col h-full" id="case-converter">
+                    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Text Case Converter</h2>
+                    <label for="case-text" class="sr-only">Text to convert case</label>
+                    <textarea id="case-text" class="input-field flex-grow min-h-[120px] resize-y mb-4" placeholder="Enter text here..."></textarea>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <button class="btn-secondary text-sm flex-1" onclick="convertCase('upper')">UPPERCASE</button>
+                        <button class="btn-secondary text-sm flex-1" onclick="convertCase('lower')">lowercase</button>
+                        <button class="btn-secondary text-sm flex-1" onclick="convertCase('title')">Title Case</button>
+                        <button class="btn btn-sm flex-1" onclick="copyText('case-text')">Copy</button>
+                    </div>
+                </article>
+
+                <!-- 6. Base64 Encoder/Decoder -->
+                <article class="glass-card flex flex-col h-full" id="base64-tool">
+                    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Base64 Encoder/Decoder</h2>
+                    <label for="b64-text" class="sr-only">Text for Base64</label>
+                    <textarea id="b64-text" class="input-field flex-grow min-h-[120px] resize-y mb-4" placeholder="Enter text or Base64..."></textarea>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <button class="btn flex-1" onclick="handleBase64('encode')">Encode</button>
+                        <button class="btn-secondary flex-1" onclick="handleBase64('decode')">Decode</button>
+                        <button class="btn-secondary" aria-label="Copy Result" onclick="copyText('b64-text')" title="Copy"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
+                    </div>
+                    <p id="b64-error" class="text-red-500 text-sm mt-2 hidden" role="alert">Invalid Base64 string.</p>
+                </article>
+
+                <!-- 7. Random Password Generator -->
+                <article class="glass-card flex flex-col h-full md:col-span-2" id="password-generator">
+                    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Random Password Generator</h2>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1 space-y-4">
+                            <div>
+                                <label for="pwd-length" class="flex justify-between text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
+                                    <span>Password Length</span>
+                                    <span id="pwd-len-val">16</span>
+                                </label>
+                                <input type="range" id="pwd-length" min="8" max="64" value="16" class="w-full accent-blue-600 cursor-pointer" oninput="document.getElementById('pwd-len-val').innerText = this.value; generatePassword()">
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 text-gray-700 dark:text-gray-300">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="pwd-upper" checked class="w-4 h-4 text-blue-600 rounded cursor-pointer" onchange="generatePassword()">
+                                    <span>Uppercase (A-Z)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="pwd-lower" checked class="w-4 h-4 text-blue-600 rounded cursor-pointer" onchange="generatePassword()">
+                                    <span>Lowercase (a-z)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="pwd-nums" checked class="w-4 h-4 text-blue-600 rounded cursor-pointer" onchange="generatePassword()">
+                                    <span>Numbers (0-9)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="pwd-syms" checked class="w-4 h-4 text-blue-600 rounded cursor-pointer" onchange="generatePassword()">
+                                    <span>Symbols (!@#$)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-end gap-3">
+                            <div class="relative">
+                                <label for="pwd-result" class="sr-only">Generated Password</label>
+                                <input type="text" id="pwd-result" class="input-field text-lg font-mono tracking-wider pr-12" readonly placeholder="Generated Password">
+                                <button onclick="copyText('pwd-result')" class="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-gray-500 hover:text-blue-600 transition-colors" title="Copy Password" aria-label="Copy password">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </button>
+                            </div>
+                            <button class="btn w-full" onclick="generatePassword()">Generate New Password</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Tab 3: Dates & Units -->
+        <section id="dates-units" class="tool-section" role="tabpanel" aria-labelledby="tab-dates-units">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 8. Free Unit Converter -->
+                <article class="glass-card flex flex-col h-full" id="unit-converter">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-gray-800 dark:text-white"><svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg> Free Unit Converter</h2>
+                    <div class="space-y-4 flex-grow flex flex-col">
+                        <div>
+                            <label for="uc-value" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Value to convert</label>
+                            <input type="number" id="uc-value" class="input-field" value="1" oninput="convertUnit()">
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1">
+                                <label for="uc-from" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">From</label>
+                                <select id="uc-from" class="input-field" onchange="convertUnit()">
+                                    <option value="m">Meters (m)</option>
+                                    <option value="km">Kilometers (km)</option>
+                                    <option value="ft">Feet (ft)</option>
+                                    <option value="mi">Miles (mi)</option>
+                                </select>
+                            </div>
+                            <button aria-label="Swap units" class="mt-6 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-gray-700 dark:text-gray-300" onclick="swapUnits()">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                            </button>
+                            <div class="flex-1">
+                                <label for="uc-to" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">To</label>
+                                <select id="uc-to" class="input-field" onchange="convertUnit()">
+                                    <option value="ft">Feet (ft)</option>
+                                    <option value="m">Meters (m)</option>
+                                    <option value="km">Kilometers (km)</option>
+                                    <option value="mi">Miles (mi)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-auto p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-center border border-gray-200 dark:border-gray-700">
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Result</p>
+                            <p id="uc-result" class="text-2xl font-bold text-blue-600 dark:text-blue-400 break-words">3.28084</p>
+                            <button class="text-xs text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mt-2 underline" onclick="copyTextFromElement('uc-result')">Copy Result</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 9. Age Calculator Tool -->
+                <article class="glass-card flex flex-col h-full" id="age-calculator">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-gray-800 dark:text-white"><svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> Age Calculator Tool</h2>
+                    <div class="space-y-4 flex-grow flex flex-col">
+                        <div>
+                            <label for="age-dob" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Date of Birth</label>
+                            <input type="date" id="age-dob" class="input-field" onchange="calcAge()">
+                        </div>
+                        <div class="mt-auto p-4 bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+                            <p id="age-error" class="text-red-500 text-sm hidden mb-2" role="alert">Please select a valid past date.</p>
+                            <div id="age-result" class="hidden text-center">
+                                <div class="grid grid-cols-3 gap-2 text-center">
+                                    <div>
+                                        <p id="age-y" class="text-2xl font-bold text-blue-600 dark:text-blue-400">0</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase">Years</p>
+                                    </div>
+                                    <div>
+                                        <p id="age-m" class="text-2xl font-bold text-blue-600 dark:text-blue-400">0</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase">Months</p>
+                                    </div>
+                                    <div>
+                                        <p id="age-d" class="text-2xl font-bold text-blue-600 dark:text-blue-400">0</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase">Days</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="age-placeholder" class="text-center text-gray-500 dark:text-gray-400 mt-2">Select your birth date</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 10. Days Between Dates -->
+                <article class="glass-card flex flex-col h-full" id="days-between">
+                    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Days Between Dates</h2>
+                    <div class="space-y-4 flex-grow flex flex-col">
+                        <div>
+                            <label for="db-start" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Start Date</label>
+                            <input type="date" id="db-start" class="input-field" onchange="calcDaysBetween()">
+                        </div>
+                        <div>
+                            <label for="db-end" class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">End Date</label>
+                            <input type="date" id="db-end" class="input-field" onchange="calcDaysBetween()">
+                        </div>
+                        <div class="mt-auto p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-center border border-gray-200 dark:border-gray-700">
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Difference</p>
+                            <p id="db-result" class="text-2xl font-bold text-blue-600 dark:text-blue-400">--</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto py-8 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-600 dark:text-gray-400 font-medium">
+                &copy; <span id="current-year"></span> FreeToolbox. All rights reserved.
+            </p>
+            <p class="text-sm text-gray-500 dark:text-gray-500 mt-2">The ultimate free toolbox containing essential SEO tools for webmasters, everyday calculators, and text utilities.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set Current Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        function setTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                themeToggleLightIcon.classList.remove('hidden');
+                themeToggleDarkIcon.classList.add('hidden');
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeToggleLightIcon.classList.add('hidden');
+                themeToggleDarkIcon.classList.remove('hidden');
+                localStorage.setItem('color-theme', 'light');
+            }
+        }
+
+        // Initialize Theme
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            const isDark = document.documentElement.classList.contains('dark');
+            setTheme(!isDark);
+        });
+
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            // Update buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                if (btn.id === 'tab-' + tabId) {
+                    btn.classList.add('bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-500/30', 'active');
+                    btn.classList.remove('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
+                    btn.setAttribute('aria-selected', 'true');
+                } else {
+                    btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-500/30', 'active');
+                    btn.classList.add('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
+                    btn.setAttribute('aria-selected', 'false');
+                }
+            });
+
+            // Update sections
+            document.querySelectorAll('.tool-section').forEach(section => {
+                if (section.id === tabId) {
+                    section.classList.remove('hidden');
+                    // Small delay to allow display:block to apply before opacity transition
+                    setTimeout(() => section.classList.add('active'), 10);
+                } else {
+                    section.classList.remove('active');
+                    section.classList.add('hidden');
+                }
+            });
+            
+            // Update URL hash without jumping
+            history.pushState(null, null, `#${tabId}`);
+        }
+
+        // Handle initial hash routing
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1);
+            if (['math-finance', 'text-dev', 'dates-units'].includes(hash)) {
+                switchTab(hash);
+            }
+            // Init Password Generator
+            generatePassword();
+            // Init Dates to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('db-start').value = today;
+            document.getElementById('db-end').value = today;
+            calcDaysBetween();
+        });
+
+        // Shared Utility: Copy Text
+        function copyText(inputId) {
+            const el = document.getElementById(inputId);
+            el.select();
+            el.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(el.value).then(() => {
+                // simple visual feedback
+                const origBg = el.style.backgroundColor;
+                el.style.backgroundColor = '#dcfce7'; // light green
+                setTimeout(() => el.style.backgroundColor = origBg, 300);
+            }).catch(err => console.error('Copy failed', err));
+        }
+
+        function copyTextFromElement(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const el = document.getElementById(id);
+                const origColor = el.style.color;
+                el.style.color = '#22c55e'; // green
+                setTimeout(() => el.style.color = origColor, 300);
+            }).catch(err => console.error('Copy failed', err));
+        }
+
+        // Tool 1: Standard Calculator
+        let calcVal = '0';
+        const calcDisp = document.getElementById('calc-display');
+        function updateCalcDisp() { calcDisp.value = calcVal; }
+        function calcNum(n) {
+            if (calcVal === '0' || calcVal === 'Error') calcVal = n;
+            else calcVal += n;
+            updateCalcDisp();
+        }
+        function calcOp(op) {
+            if (calcVal === 'Error') return;
+            const lastChar = calcVal.slice(-1);
+            if (['+','-','*','/'].includes(lastChar)) {
+                calcVal = calcVal.slice(0, -1) + op;
+            } else {
+                calcVal += op;
+            }
+            updateCalcDisp();
+        }
+        function calcClear() { calcVal = '0'; updateCalcDisp(); }
+        function calcDel() { 
+            if (calcVal === 'Error') calcClear();
+            else {
+                calcVal = calcVal.slice(0, -1);
+                if (calcVal === '') calcVal = '0';
+                updateCalcDisp();
+            }
+        }
+        function calcEq() {
+            try {
+                // Ensure only safe characters are evaluated
+                if (/[^0-9+\-*/.]/.test(calcVal)) throw new Error('Invalid syntax');
+                
+                // Construct a strict parsing function safely
+                const res = new Function('return ' + calcVal)();
+                
+                if (!isFinite(res) || isNaN(res)) throw new Error('Math error');
+                
+                // Fix floating point quirks
+                calcVal = String(Math.round(res * 100000000) / 100000000);
+            } catch (e) {
+                calcVal = 'Error';
+            }
+            updateCalcDisp();
+        }
+
+        // Tool 2: BMI Calculator
+        function calcBMI() {
+            const h = parseFloat(document.getElementById('bmi-height').value);
+            const w = parseFloat(document.getElementById('bmi-weight').value);
+            const resEl = document.getElementById('bmi-result');
+            const catEl = document.getElementById('bmi-category');
+            
+            if (h > 0 && w > 0) {
+                const bmi = (w / Math.pow(h/100, 2)).toFixed(1);
+                resEl.innerText = bmi;
+                let cat = '', color = '';
+                if (bmi < 18.5) { cat = 'Underweight'; color = 'text-yellow-500'; }
+                else if (bmi < 25) { cat = 'Normal weight'; color = 'text-green-500'; }
+                else if (bmi < 30) { cat = 'Overweight'; color = 'text-orange-500'; }
+                else { cat = 'Obese'; color = 'text-red-500'; }
+                catEl.innerText = cat;
+                catEl.className = 'font-medium ' + color;
+            } else {
+                resEl.innerText = '--';
+                catEl.innerText = 'Enter details';
+                catEl.className = 'font-medium text-gray-700 dark:text-gray-300';
+            }
+        }
+
+        // Tool 3: Tip Splitter
+        function calcTip() {
+            const bill = parseFloat(document.getElementById('tip-bill').value) || 0;
+            const percent = parseFloat(document.getElementById('tip-percent').value) || 0;
+            const people = parseInt(document.getElementById('tip-people').value) || 1;
+            
+            if (people < 1) return;
+
+            const tipAmt = bill * (percent / 100);
+            const total = bill + tipAmt;
+            const perPerson = total / people;
+
+            document.getElementById('tip-total').innerText = '$' + tipAmt.toFixed(2);
+            document.getElementById('tip-per-person').innerText = '$' + perPerson.toFixed(2);
+        }
+
+        // Tool 4: Text Counter
+        function updateCounter() {
+            const text = document.getElementById('counter-text').value;
+            const chars = text.length;
+            const noSpaces = text.replace(/\s+/g, '').length;
+            const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+            const paras = text.trim() === '' ? 0 : text.split(/\n+/).filter(p => p.trim() !== '').length;
+
+            document.getElementById('count-chars').innerText = chars;
+            document.getElementById('count-nospaces').innerText = noSpaces;
+            document.getElementById('count-words').innerText = words;
+            document.getElementById('count-paras').innerText = paras;
+        }
+
+        // Tool 5: Case Converter
+        function convertCase(type) {
+            const el = document.getElementById('case-text');
+            const txt = el.value;
+            if (!txt) return;
+            if (type === 'upper') el.value = txt.toUpperCase();
+            if (type === 'lower') el.value = txt.toLowerCase();
+            if (type === 'title') {
+                el.value = txt.toLowerCase().replace(/(?:^|\s)\w/g, match => match.toUpperCase());
+            }
+        }
+
+        // Tool 6: Base64
+        function handleBase64(action) {
+            const el = document.getElementById('b64-text');
+            const errEl = document.getElementById('b64-error');
+            const txt = el.value;
+            if(!txt) return;
+            
+            errEl.classList.add('hidden');
+            
+            try {
+                if (action === 'encode') {
+                    el.value = btoa(unescape(encodeURIComponent(txt)));
+                } else {
+                    el.value = decodeURIComponent(escape(atob(txt)));
+                }
+            } catch (e) {
+                errEl.classList.remove('hidden');
+            }
+        }
+
+        // Tool 7: Password Generator
+        function generatePassword() {
+            const len = parseInt(document.getElementById('pwd-length').value);
+            const hasU = document.getElementById('pwd-upper').checked;
+            const hasL = document.getElementById('pwd-lower').checked;
+            const hasN = document.getElementById('pwd-nums').checked;
+            const hasS = document.getElementById('pwd-syms').checked;
+            
+            const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const lower = 'abcdefghijklmnopqrstuvwxyz';
+            const nums = '0123456789';
+            const syms = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
+            
+            let chars = '';
+            if (hasU) chars += upper;
+            if (hasL) chars += lower;
+            if (hasN) chars += nums;
+            if (hasS) chars += syms;
+            
+            if (chars === '') {
+                document.getElementById('pwd-result').value = 'Select options';
+                return;
+            }
+            
+            let pwd = '';
+            const array = new Uint32Array(len);
+            window.crypto.getRandomValues(array);
+            for (let i = 0; i < len; i++) {
+                pwd += chars[array[i] % chars.length];
+            }
+            document.getElementById('pwd-result').value = pwd;
+        }
+
+        // Tool 8: Unit Converter
+        const rates = {
+            'm': 1,
+            'km': 1000,
+            'ft': 0.3048,
+            'mi': 1609.344
+        };
+        function convertUnit() {
+            const val = parseFloat(document.getElementById('uc-value').value);
+            if (isNaN(val)) {
+                document.getElementById('uc-result').innerText = '--';
+                return;
+            }
+            const from = document.getElementById('uc-from').value;
+            const to = document.getElementById('uc-to').value;
+            
+            // convert to meters first, then to target
+            const meters = val * rates[from];
+            const result = meters / rates[to];
+            
+            // Format smartly
+            document.getElementById('uc-result').innerText = result.toLocaleString('en-US', {maximumSignificantDigits: 7});
+        }
+        function swapUnits() {
+            const from = document.getElementById('uc-from');
+            const to = document.getElementById('uc-to');
+            const temp = from.value;
+            from.value = to.value;
+            to.value = temp;
+            convertUnit();
+        }
+
+        // Tool 9: Age Calculator
+        function calcAge() {
+            const dobInput = document.getElementById('age-dob').value;
+            const errEl = document.getElementById('age-error');
+            const resEl = document.getElementById('age-result');
+            const phEl = document.getElementById('age-placeholder');
+            
+            if (!dobInput) return;
+            
+            const dob = new Date(dobInput);
+            const today = new Date();
+            
+            if (dob > today) {
+                errEl.classList.remove('hidden');
+                resEl.classList.add('hidden');
+                phEl.classList.add('hidden');
+                return;
+            }
+            
+            errEl.classList.add('hidden');
+            resEl.classList.remove('hidden');
+            phEl.classList.add('hidden');
+            
+            let y = today.getFullYear() - dob.getFullYear();
+            let m = today.getMonth() - dob.getMonth();
+            let d = today.getDate() - dob.getDate();
+            
+            if (d < 0) {
+                m--;
+                const lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                d += lastMonth.getDate();
+            }
+            if (m < 0) {
+                y--;
+                m += 12;
+            }
+            
+            document.getElementById('age-y').innerText = y;
+            document.getElementById('age-m').innerText = m;
+            document.getElementById('age-d').innerText = d;
+        }
+
+        // Tool 10: Days Between
+        function calcDaysBetween() {
+            const d1Val = document.getElementById('db-start').value;
+            const d2Val = document.getElementById('db-end').value;
+            const res = document.getElementById('db-result');
+            
+            if (d1Val && d2Val) {
+                const d1 = new Date(d1Val);
+                const d2 = new Date(d2Val);
+                d1.setHours(0,0,0,0);
+                d2.setHours(0,0,0,0);
+                const diffTime = Math.abs(d2 - d1);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                res.innerText = diffDays + (diffDays === 1 ? ' Day' : ' Days');
+            } else {
+                res.innerText = '--';
+            }
+        }
+        
+        // Initial calcs
+        convertUnit();
+    </script>
+</body>
+</html>
